@@ -1,0 +1,181 @@
+body{
+    background-color: #906bdf;
+
+}
+
+/*logo del menu*/
+.logo{
+    width: 70px;
+}
+
+.container-fluid{
+    background-color: #99dbe5;
+}
+
+/*color del menu principal*/
+.navbar-light .navbar-nav .nav-item .nav-link{
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif
+ 
+}
+
+
+
+/*Contenedor del carrusel*/
+.contenedor-slider{
+    width: 100%;
+    height: 330px;
+    
+}
+/*Cartel purpura*/
+.festival{
+    display: flex;
+    align-items:center ;
+    height: 80px;
+    width: 100%;
+    background-color: #751791;
+    box-shadow: 5px -5px 3px;
+    --nord0: #88C0D0;    
+}
+.festival h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: auto;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.lista-aside{
+    padding: 0px;
+    
+}
+
+/*Titulos de Artistas y acceso rapido*/
+h5{
+    background-color: #001E2D;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+/*-----Menu Vertical--------*/
+.vertical .nav-link{
+    color: #001E2D;
+    border: 2px solid #001E2D;
+    margin-bottom: 4px;
+    /*background-color: #001E2D;*/
+   
+    
+} 
+/* Al pasar el mouse sobre la LISTA */
+ul:hover li a {
+    transform: scale(1);
+    opacity: 0.7;
+    filter: blur(0.5px);
+
+}
+
+/* Al pasar el mouse sobre un LINK dentro de la lista */
+ul li a:hover {
+    transform: scale(1.1); 
+    opacity: 1;
+    filter: blur(0px);
+}
+
+/* Al ENTRAR con el mouse sobre a link dentro de la lista */
+ul li a:before {
+    content: "";
+    position: absolute; 
+    top: 0px;
+    left: 0px;
+    width: 100%;        
+    height: 100%;      
+    transition: 0.4s;
+    transform-origin: right;
+    transform: scaleX(1.1); 
+    z-index: -1;      
+}
+
+
+.card-body a:hover{
+    background-color: #da24f2;
+    color: #fff;
+}
+
+/*estilos footer*/
+footer{
+    background-color: #001E2D;
+    height: 150px;
+}
+.pie-footer{
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+.desarrolladores, .direccion, .redes{
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: 200;
+}
+.iconos-redes img{
+    padding: 0px;
+    margin: 0px;
+    margin-right: 10px;
+    
+}
+
+.formulario h3{
+    text-align: center;
+    color: #000;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+form .boton{
+    background-color: #001E2D;
+    text-align: center;
+    width: 100%;
+}
+form .boton:hover{
+    padding: 5px;
+    background-color: #001E2D;
+}
+.contenedor-boton{
+    text-align: center;
+}
+
+/*Estilos de la pagina de contacto*/
+
+/*Aca arrancan los media query*/
+@media(max-width:700px){
+
+    .nuestra-carrera h1{
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    .iconos-redes img{
+        width: 20px;
+    }
+    h5{
+       font-size: 15px; 
+    }
+    .logo{
+        width: 40px;
+    }
+    .pie-footer{
+        font-size: 13px;
+    }
+    .desarrolladores, .direccion{
+        font-size: 10px;
+    }
+}
