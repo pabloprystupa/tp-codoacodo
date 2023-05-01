@@ -1,181 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 5px;
+}
 body{
     background-color: #906bdf;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
-
-/*logo del menu*/
-.logo{
-    width: 70px;
-}
-
-.container-fluid{
-    background-color: #99dbe5;
-}
-
-/*color del menu principal*/
-.navbar-light .navbar-nav .nav-item .nav-link{
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif
- 
-}
-
-
-
-/*Contenedor del carrusel*/
-.contenedor-slider{
-    width: 100%;
-    height: 330px;
-    
-}
-/*Cartel purpura*/
-.festival{
-    display: flex;
-    align-items:center ;
-    height: 80px;
-    width: 100%;
-    background-color: #751791;
-    box-shadow: 5px -5px 3px;
-    --nord0: #88C0D0;    
-}
-.festival h1{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.contenedor {
+    display: grid;
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    background-color: rgb(41, 101, 199);
     margin: auto;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    color: #fff;
-    font-weight: 500;
+    overflow: hidden;
 }
 
-.lista-aside{
-    padding: 0px;
-    
+/*Formato titulos */
+header{
+    width: 100%;
+    height: 600px;
+    background: #fc00ff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fc00ff, #00dbde); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(299, 100%, 50%, 0.354), hsla(202, 100%, 44%, 0.354)), url(../img/fondo.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
 }
-
-/*Titulos de Artistas y acceso rapido*/
-h5{
-    background-color: #001E2D;
-    color: #fff;
+header .texto-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
-    padding: 5px 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-
+}
+.texto-header h1{
+    font-size: 50px;
+    color: #fff;
+}
+.texto-header h2{
+    font-size: 30px;
+    color: #fff;
 }
 
-/*-----Menu Vertical--------*/
-.vertical .nav-link{
-    color: #001E2D;
-    border: 2px solid #001E2D;
-    margin-bottom: 4px;
-    /*background-color: #001E2D;*/
-   
-    
-} 
-/* Al pasar el mouse sobre la LISTA */
-ul:hover li a {
-    transform: scale(1);
-    opacity: 0.7;
-    filter: blur(0.5px);
+/*formato de carrousel */
+li {
+    list-style-type: none;
+  }
+  .carrousel {
+    width: 90%;
+    max-width: 120em;
+    padding: 2em;
+    color: var(--negro);
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+    overflow: hidden;
+  }  
+  .carrousel .grande {
+    width: 200%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--negro);
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: var(--blanco);
+    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+    padding: 2em;
+    transition: all 0.5s ease;
+    transform: translateX(0%);
+  }
+  .carrousel .img {
+    width: calc( 100% / 4 - 2em);
+    min-height: 10vh;
+    color: black;
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: var(--blanco);
+  }
+  .carrousel .puntos {
+    width: 100%;
+    margin: 1em 0 0;
+    padding: 0.4em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .carrousel .punto {
+    width: 2em;
+    height: 2em;
+    margin: 1em 1em 0;
+    transition: all 0.3s ease;
+    border-radius: 1em;
+    background-color: blue;
+  }
+  .carrousel .punto.activo {
+    background-color: lightblue;
+  }
 
+/*Formato de menu superior */
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
 }
-
-/* Al pasar el mouse sobre un LINK dentro de la lista */
-ul li a:hover {
+nav >a{
+    color: #00dbde;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px ;
+}
+nav >a:hover{
     transform: scale(1.1); 
     opacity: 1;
-    filter: blur(0px);
+    filter: blur(0.5px);
+    text-decoration: underline;
 }
 
-/* Al ENTRAR con el mouse sobre a link dentro de la lista */
-ul li a:before {
-    content: "";
-    position: absolute; 
-    top: 0px;
-    left: 0px;
-    width: 100%;        
-    height: 100%;      
-    transition: 0.4s;
-    transform-origin: right;
-    transform: scaleX(1.1); 
-    z-index: -1;      
-}
+/* Formato de accesos */   
+.vertical .nav-link{
+    color: #67ccd9;
+    border: 2px solid #001E2D;
+    margin-bottom: 4px;
+    background-color: #001E2D;    
+    text-decoration: none;
 
+} 
 
-.card-body a:hover{
-    background-color: #da24f2;
-    color: #fff;
-}
-
-/*estilos footer*/
-footer{
-    background-color: #001E2D;
-    height: 150px;
-}
-.pie-footer{
-    margin: 0px;
-    padding: 0px;
-    color: #fff;
-    text-align: center;
-    font-family: sans-serif;
-    font-weight: 100;
-}
-.desarrolladores, .direccion, .redes{
-    margin: 0px;
-    padding: 0px;
-    color: #fff;
-    text-align: center;
-    font-size: 12px;
-    font-family: sans-serif;
-    font-weight: 200;
-}
-.iconos-redes img{
-    padding: 0px;
-    margin: 0px;
-    margin-right: 10px;
-    
-}
-
-.formulario h3{
-    text-align: center;
-    color: #000;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-}
-form .boton{
-    background-color: #001E2D;
-    text-align: center;
-    width: 100%;
-}
-form .boton:hover{
-    padding: 5px;
-    background-color: #001E2D;
-}
-.contenedor-boton{
-    text-align: center;
-}
-
-/*Estilos de la pagina de contacto*/
-
-/*Aca arrancan los media query*/
-@media(max-width:700px){
-
-    .nuestra-carrera h1{
-        font-size: 18px;
-        letter-spacing: 1px;
+/* Al pasar el mouse sobre la LISTA */
+    ul:hover li a {
+        transform: scale(1);
+        opacity: 0.7;
+        filter: blur(0.5px); 
     }
-    .iconos-redes img{
-        width: 20px;
+    /* Al pasar el mouse sobre un LINK dentro de la lista */
+    ul li a:hover {
+        transform: scale(1.1); 
+        opacity: 1;
+        filter: blur(0px);
     }
-    h5{
-       font-size: 15px; 
+    /* Al ENTRAR con el mouse sobre a link dentro de la lista */
+    ul li a:before {
+        content: "";
+        position: absolute; 
+        top: 0px;
+        left: 0px;
+        width: 100%;        
+        height: 100%;      
+        transition: 0.4s;
+        transform-origin: right;
+        transform: scaleX(1.1); 
+        z-index: -1;      
+    }  
+
+/* Formato Columnas - cartas */
+    .Columnas{
+        width: 100%;
+        margin: auto;
+        margin-bottom: 50px;
     }
-    .logo{
-        width: 40px;
+    .carta{
+        width: 25%;
+        float: left;
+        padding: 20px 20px;
+        box-sizing: border-box;
+        margin: auto;
+        background-color: aquamarine;
+        margin-bottom: 60px;
+        text-align: center;
+    } 
+    .carta img{
+        width: 100%;
+        max-height: 350px;
     }
-    .pie-footer{
-        font-size: 13px;
+    h4{
+        margin-top: 15px;
+        font-size: 16px;    
     }
-    .desarrolladores, .direccion{
-        font-size: 10px;
+/* Formato footer */ 
+    .container-fluid{
+        width: 100%;
+        background-color: #fc00ff;
+        clear: both;
+        text-align: center;
+        color : white;
+        transition: 0.5s;
     }
-}
+    .container-fluid :hover{
+        background-color: #591360;
+        transition: 0.5s;
+    }

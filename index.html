@@ -1,70 +1,60 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="pagina.js" ></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="icon" href="./img/logo.ico">
     <title>..::Verte Libre - Festival::..</title>
 </head>
 
 <body>
-    <!---Arranca el nav (menu)-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="img/logo1.png" class="logo" alt=""></a>
-          <a class="navbar-brand" href="#">  Verte Libre 2023 </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 color">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#"><i class="icon-inicio"></i>Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link items" href="entradas.html"><i class="icon-maletin"></i>Comprar Entradas</a>
-                        </li>                        
-                        <li class="nav-item">
-                            <a class="nav-link items" href="artistas.html"><i class="icon-book"></i>Grilla</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link items" href="contacto.html"><i class=" icon-address-book"></i> Contacto</a>
-                        </li>
-                    </ul>
-            </div>
+    <header>
+        <nav>
+            <a href="#"> Inicio </a>
+            <a href="#"> GRILLA </a>
+            <a href="#"> Artistas </a>
+            <a href="#"> COMPRAR ENTRADAS </a>
+            <a href="#"> Contacto </a>
+        </nav>
+       <section class="texto-header">
+            <h1>El Festival que estabas necesitando!</h1>
+            <h2>20 de Noviembre - 19hs.</h2>
+       </section> 
+    </header>
+    
+    <div class="carrousel">
+        <div class="grande">
+            <img src= "img/wos.webp" alt="imagen 1" class ="img">
+            <img src= "img/emilia.jpg" alt="imagen 2" class ="img">
+            <img src= "img/lali.jpg" alt="imagen 3" class ="img">
+            <img src= "img/rusherking.webp" alt="imagen 4" class ="img">                           
         </div>
-    </nav>
-
-    <div class="container">
-        <!--cartel purpura -->
-        <div class="row mt-4">
-            <div class="festival" >
-                <h1>El festival que estabas necesitando!!!</h1>
-            </div>
-        </div>    
-        
+            <ul class= "puntos">
+                <li class="punto activo"> </li>
+                <li class="punto"> </li>
+            </ul>
+    </div>
+            <!--Accesos rapidos-->
         <div class="row">
-            <!--Widget de ventana de accesos rapidos-->
-            <aside class="col-12 col-md-4 mt-2">
-                <h5>Accesos Rápidos</h5>
+            <aside class="Accesos">
+                <h2>Accesos Rápidos</h2>
                 <div class="nav flex-column vertical">
                     <ul>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="icon-location"></i> COMPRAR ENTRADAS</a>
+                            <a class="nav-link" href="#"><i class="icon-location"></i> COMPRAR ENTRADAS </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class=" icon-users"></i> Artistas</a>
+                            <a class="nav-link" href="#"><i class=" icon-users"></i> Artistas </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class=" icon-sobre"></i> Stremming</a>
+                            <a class="nav-link" href="#"><i class=" icon-sobre"></i> Stremming </a>
                         </li>
                         <li lass="nav-item">
-                            <a class="nav-link" href="#"><i class="icon-calendar-empty"></i> Contacto</a>
+                            <a class="nav-link" href="#"><i class="icon-calendar-empty"></i> Contacto </a>
                         </li>
                         <li lass="nav-item">
                              <a class="nav-link" href="#"><i class="ubicacion"></i> Cómo llegar </a>
@@ -72,121 +62,56 @@
                     </ul>   
                 </div>
             </aside>
-
-            <!--Arranca el slider carrusel-->
-            <div class="col-12 col-md-8 mt-2">
-                <h5>Artistas</h5>
-                <div id="carouselExampleSlidesOnly" class="carousel slide " data-bs-ride="carousel">
-                    <div class="carousel-inner contenedor-slider">
-                      <div class="carousel-item active">
-                        <img src="img/lali.jpg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="img/wos.webp" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="img/emilia.jpg" class="d-block w-100" alt="...">
-                      </div>
-                    </div>
-                  </div>
+        </div>    
+            <!--Noticias en 4 columnas-->
+        <section class="Columnas">
+            <div class="carta">
+                <h4>Recuerdos </h4> 
+                <img src="img/mercha.png"  alt="...">
+                <p class="card-text">Vasos térmicos, remeras, buzos, mate, etc. Todo el merchandising está aquí!</p>
+                <a href="#">Comprar</a> 
             </div>
-        </div><!--Fin del slider-->
-
-
-        <!--Arrancan las noticias-->
-        <div class="row mt-3">
-            <div class="col-12 col-sm-6 col-md-3 mb-2">
-                <div class="card" style="width: auto;">
-                    <img src="img/mercha.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Recuerdos</h5>
-                      <p class="card-text">Vasos térmicos, remeras, buzos, mate, etc. Todo el merchandising está aquí!</p>
-                      <a href="#">Comprar</a>
-                    </div>
-                  </div>
+            <div class="carta">
+                <h4> Food Trucks </h4>
+                <img src="img/foodtruck.jpg" alt="...">
+                <p class="card-text">Hamburguesas, pizzas, gaseosas, cervezas artesanales, opciones veggie y muchas sorpresas más!.</p>
+                <a href="#">Comprar</a>
             </div>
-
-            <div class="col-12 col-sm-6 col-md-3 mb-2">
-                <div class="card" style="width: auto;">
-                    <img src="img/foodtruck.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Food Trucks</h5>
-                      <p class="card-text">Hamburguesas, pizzas, papas, gaseosas, cervezas artesanales, opciones veggie y muchas sorpresas más! Para disfrutar el mejor festival de la mejor manera!.</p>
-                      <a href="#">Comprar</a>
-                    </div>
-                  </div>
+            <div class="carta">
+                <h4> Mapa del festival </h4>
+                <img src="img/mapa.jpg"  alt="...">
+                <p class="card-text">Mira dónde están los 3 escenarios, los food trucks y muchas cosas más!.</p>
+                <a href="#">Mira aquí</a>
             </div>
-            <div class="col-12 col-sm-6 col-md-3 mb-2">
-                <div class="card" style="width: auto;">
-                    <img src="img/mapa.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Mapa del festival</h5>
-                      <p class="card-text">Mira dónde están los 3 escenarios, los food trucks y muchas cosas más!.</p>
-                      <a href="#">Mira aquí</a>
-                    </div>
-                  </div>
-            </div>
+            <div class="carta">
+                <h4> Grilla </h4>
+                <img src="img/grilla.jpg"  alt="...">
+                <p class="card-text">Seguí el festival minuto a minuto para que no te pierdas nada!.</p>
+                <a href="#" style="float: right;">Seguir Leyendo</a>
+            </div>    
+        </section>
 
-            <div class="col-12 col-sm-6 col-md-3 mb-2">
-                <div class="card" style="width: auto;">
-                    <img src="img/grilla.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Grilla</h5>
-                      <p class="card-text">Minuto a minuto para que no te pierdas nada!.</p>
-                      <a href="#" style="float: right;">Seguir Leyendo</a>
-                    </div>
-                  </div>
-            </div>
-
-        </div>
-
-    </div> <!--Fin del container-->
-
-        <!--Arranca el footer-->
+    <!--Arranca el footer-->
     <div class="container-fluid">
-      <footer class="row d-flex align-items-center mb-3">
-
-        <div class="col-12 col-md-6">
-          <p class="pie-footer"> Verte Libre El Festival - &copy; 2023</p>
-          <p class="desarrolladores"> Desarrollado por: nombres.</p>
-          <p class="direccion"><i class="icon-telefono"></i> (0343) 4224435 - Entre Ríos-</p>
-
-        </div>
-
-        <div class="col-12 col-md-6 text-center">
-          <ul class="iconos-redes">
-            <p class="redes"> Siguenos en nuestras redes: </p> <br>
-            <a href=""><img src="img/icono-face.png" alt=""></a>
-            <a href=""><img src="img/icono-instagram.png" alt=""></a>
-            <a href=""><img src="img/icono-youtube.png" alt=""></a>
-            <a href=""><img src="img/icono-twitter.png" alt=""></a>
-            
-          </ul>
-
-        </div>
-
-    </footer>
-
-
-    </div>
-
-        
-        
-
-
-
-
-
-
-
-
-
+        <footer class="nosotros">
+          <div class="nosotros">
+            <p class="pie-footer"> Verte Libre El Festival - &copy; 2023</p>
+            <p class="desarrolladores"> Desarrollado por: Rebora, Alejandro - Ellenberger, Gisela - Prystupa, Pablo - Lovotti, Guadalupe.</p> <br>
+          </div>
+          <div class="redes">
+            <ul class="iconos-redes">
+              <p class="redes"> Siguenos en nuestras redes: </p> 
+              <a href=""><img src="img/icono-face.png" alt=""></a>
+              <a href=""><img src="img/icono-instagram.png" alt=""></a>
+              <a href=""><img src="img/icono-youtube.png" alt=""></a>
+              <a href=""><img src="img/icono-twitter.png" alt=""></a>
+            </ul>
+  
+          </div>
+  
+      </footer>
+    </main>
     
-    
-
-    
-
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>
+
