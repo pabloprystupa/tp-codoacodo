@@ -6,16 +6,15 @@
 }
 body{
     background-color: #906bdf;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-seri
 
 }
 .contenedor {
-    display: grid;
-    padding: 60px 0;
+    display: flex;
+    padding: 30px 0;
     width: 90%;
     max-width: 1000px;
-    grid-template-columns: auto auto;
-    gap: 10px;
+    gap: 5px;
     background-color: rgb(41, 101, 199);
     margin: auto;
     overflow: hidden;
@@ -32,7 +31,12 @@ header{
     background-attachment: fixed;
     position: relative;
 }
-
+.logo{
+    float: left;
+    height: 100px;
+    margin: 10px;
+    color: white;
+}
 header h1{
     color: white;
     padding: 80px 0;
@@ -71,27 +75,19 @@ li {
     overflow: hidden;
   }  
   .carrousel .grande {
-    width: 200%;
+    width: 220%;
     display: flex;
-    flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    color: var(--negro);
     transition: all 0.4s ease;
     border-radius: 1em;
-    background-color: var(--blanco);
-    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
-    padding: 2em;
     transition: all 0.5s ease;
     transform: translateX(0%);
   }
   .carrousel .img {
     width: calc( 100% / 4 - 2em);
-    min-height: 10vh;
-    color: black;
     transition: all 0.4s ease;
     border-radius: 1em;
-    background-color: var(--blanco);
   }
   .carrousel .puntos {
     width: 100%;
@@ -108,42 +104,68 @@ li {
     margin: 1em 1em 0;
     transition: all 0.3s ease;
     border-radius: 1em;
-    background-color: blue;
+    background-color: rgb(16, 16, 107);    
   }
   .carrousel .punto.activo {
-    background-color: lightblue;
+    background-color: rgb(123, 198, 224);
+    box-shadow: 0 3px 3px 2px #205d65;
   }
 
 /*Formato de menu superior */
 nav{
-    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    float: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 25px;
     font-weight: bold;
     text-align: right;
     text-shadow: #67ccd9;
-    padding: 30px 50px 0 0;
+    padding: 30px 30px 0 0;
+    text-decoration: none;
 }
 nav >a{
-    color: #092b2c;
+    color: #e2b5db;
     font-weight: 300;
     text-decoration: none;
-    margin-right: 10px ;
+    text-shadow: 2px 2px 3px #000; 
+    margin-right:25px;    
 }
 nav >a:hover{
     transform: scale(1.1); 
-    opacity: 1;
     filter: blur(0.5px);
-    text-decoration: underline;
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    }
+      
+
+.Sonido{
+    position: absolute;
+    top: 1100px;
+    right: 80px;
+}
+
+audio{
+    position: absolute;
+    right: 200px;
+    border:#591360; 
 }
 
 /* Formato de accesos */   
 .vertical .nav-link{
     color: #67ccd9;
-    border: 2px solid #001E2D;
-    margin-bottom: 4px;
-    background-color: #001E2D;    
+    border: 5px solid #001E2D;
+    margin-bottom: 10px;
+    background-color: #001E2D;   
+    border-radius: 5px;
     text-decoration: none;
 } 
+.nav-link img{
+    height: 25px;
+    margin: 2px 5px;
+    display: inline-block;
+    text-align: center;
+}
 
 /* Al pasar el mouse sobre la LISTA */
     ul:hover li a {
@@ -156,6 +178,9 @@ nav >a:hover{
         transform: scale(1.1); 
         opacity: 1;
         filter: blur(0px);
+    }
+    ul li a:hover img{
+        transform: scale(2.1);
     }
     /* Al ENTRAR con el mouse sobre a link dentro de la lista */
     ul li a:before {
@@ -172,15 +197,11 @@ nav >a:hover{
     } 
 
     .cartas{
-        width: 100%;
+        width: 50%;
         background: #fc00ff;
         padding: 20px;
         float: left;
         box-sizing: border-box;
-    }
-    .acontenedorArtistas img{
-        width: 50%;
-        height:50%;
     }
 
 /* Formato Columnas - cartas */
@@ -189,6 +210,7 @@ nav >a:hover{
         margin: auto;
         margin-bottom: 50px;
     }
+
     .carta{
         width: 25%;
         float: left;
@@ -202,11 +224,44 @@ nav >a:hover{
     .carta img{
         width: 100%;
         max-height: 350px;
+        border-style: 3px groove rgb(14, 136, 83) ;
     }
+    .carta .boton{
+            display: inline-block;
+            background-color: rgb(74, 211, 122);
+            padding: 2px;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 15px;
+            border: 1px solid black;
+            border-radius: 5%;
+    }    
     h4{
         margin-top: 15px;
         font-size: 16px;    
     }
+
+    .boton{
+        display: inline-block;
+        background-color: rgb(211, 74, 135);
+        padding: 2px;
+        color: white;
+        text-decoration: none;
+        margin-bottom: 15px;
+        border: 1px solid black;
+        border-radius: 5%;
+        box-shadow: 0 2px 2px 1px #611985;
+    }
+    .contenedor1 h2{
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(132, 160, 217);        
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 3px #000;
+    }
+    .contenedor1 img{
+        border: 5px solid rgb(80, 166, 197); 
+    }
+
 /* Formato footer */ 
     .container-fluid{
         width: 100%;
