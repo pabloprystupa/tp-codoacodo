@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
     <script defer src="pagina.js" ></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -12,115 +12,113 @@
 </head>
 
 <body>
-    <header>
-        <img src="img/logo1.png" class="logo">
-        <nav>
-            <a href="#"> Inicio </a>
-            <a href="#"> GRILLA </a>
-            <a href="artistas.html"> Artistas </a>
-            <a href="#"> COMPRAR ENTRADAS </a>
-            <a href="#"> Contacto </a>
-        </nav>
-       <section class="texto-header">
-            <h1>El Festival que estabas necesitando!</h1>
-            <h2>20 de Noviembre - 19hs.</h2>
-       </section> 
-    </header>
-    
-    <div class="carrousel">
-        <div class="grande">
-            <img src= "img/wos.webp" alt="imagen 1" class ="img">
-            <img src= "img/lali.webp" alt="imagen 3" class ="img">
-            <img src= "img/emilia.jpg" alt="imagen 2" class ="img">
-            <img src= "img/rusherking.webp" alt="imagen 4" class ="img">                           
+    <div class="Contenedor">
+        <header>
+            <img src="img/logo1.png" class="logo">
+            <nav>
+                <a href="#"> Inicio </a>
+                <a href="#"> GRILLA </a>
+                <a href="artistas.html"> Artistas </a>
+                <a href="#"> COMPRAR ENTRADAS </a>
+                <a href="#"> Contacto </a>
+            </nav>
+        <section class="texto-header">
+                <h1>El Festival que estabas necesitando!</h1>
+                <h2>20 de Noviembre - 19hs.</h2>
+        </section> 
+        </header>
+        
+        <div class="carrousel">
+            <div class="grande">
+                <img src= "img/wos.webp" alt="imagen 1" class ="img">
+                <img src= "img/lali.webp" alt="imagen 3" class ="img">
+                <img src= "img/emilia.jpg" alt="imagen 2" class ="img">
+                <img src= "img/rusherking.webp" alt="imagen 4" class ="img">                           
+            </div>
+                <ul class= "puntos">
+                    <li class="punto activo"> </li>
+                    <li class="punto"> </li>
+                </ul>
         </div>
-            <ul class= "puntos">
-                <li class="punto activo"> </li>
-                <li class="punto"> </li>
-            </ul>
-    </div>
 
-    <div class="Sonido">
-    <audio controls autoplay loop> 
-        <source src="img/Rusherking Ft. Dread Mar I - Perfecta.mp3 " type="audio/mpeg">
-        Tu navegador no es compatible con el audio de HTML
-    </audio>    
-        <p> Estas escuchando: <br> "Perfecta" de Rusherking</p>
-    </div>
+        <div class="Sonido">
+        <audio controls autoplay loop> 
+            <source src="img/Rusherking Ft. Dread Mar I - Perfecta.mp3 " type="audio/mpeg">
+            Tu navegador no es compatible con el audio de HTML
+        </audio>    
+            <p> Estas escuchando: <br> "Perfecta" de Rusherking</p>
+        </div>
+        
+        <!--Accesos rapidos-->
+        <aside class="Accesos">
+            <h2>Accesos Rápidos</h2>
+            <div class="nav flex-column vertical">
+                <ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img src="img/boleto.png"> COMPRAR ENTRADAS </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="artistas.html"><img src="img/microfono.png"> Artistas </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img src="img/streaming.png"> Stremming </a>
+                    </li>
+                    <li lass="nav-item">
+                        <a class="nav-link" href="#"><img src="img/contacto.png"> Contacto </a>
+                    </li>
+                    <li lass="nav-item">
+                       <a class="nav-link" href="#"><img src="img/ubicacion.png"> Cómo llegar </a>
+                    </li>                        
+                </ul>   
+            </div>                       
+        </aside>               
     
-            <!--Accesos rapidos-->
-        <div class="row">
-            <aside class="Accesos">
-                <h2>Accesos Rápidos</h2>
-                <div class="nav flex-column vertical">
-                    <ul>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><img src="img/boleto.png"> COMPRAR ENTRADAS </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="artistas.html"><img src="img/microfono.png"> Artistas </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><img src="img/streaming.png"> Stremming </a>
-                        </li>
-                        <li lass="nav-item">
-                            <a class="nav-link" href="#"><img src="img/contacto.png"> Contacto </a>
-                        </li>
-                        <li lass="nav-item">
-                             <a class="nav-link" href="#"><img src="img/ubicacion.png"> Cómo llegar </a>
-                        </li>                        
-                    </ul>   
-                </div>
-            </aside>
-        </div>    
-            <!--Noticias en 4 columnas-->
+        <!--Noticias en 4 columnas-->
         <section class="Columnas">
             <div class="carta">
                 <h4>Recuerdos </h4> 
-                <img src="img/mercha.png"  alt="...">
-                <p class="card-text">Vasos térmicos, remeras, buzos, mate, etc. Todo el merchandising está aquí!</p>
-                <a href="boton">Comprar</a> 
+                <img src="img/mercha.png"  alt="img_merchandaising">
+                <p class="card-text">Vasos térmicos, remeras, buzos, mate, etc. Todo el merchandising está aquí!</p>                    
+                <a class="boton" href="#">Comprar</a> 
             </div>
             <div class="carta">
                 <h4> Food Trucks </h4>
-                <img src="img/foodtruck.jpg" alt="...">
+                <img src="img/foodtruck.jpg" alt="img_comida">
                 <p class="card-text">Hamburguesas, pizzas, gaseosas, cervezas artesanales, opciones veggie y muchas sorpresas más!.</p>
-                <a href="boton">Comprar</a>
+                <a class="boton" href="#">Encargar</a>
             </div>
             <div class="carta">
                 <h4> Mapa del festival </h4>
-                <img src="img/mapa.jpg"  alt="...">
+                <img src="img/mapa.jpg"  alt="img_mapa">
                 <p class="card-text">Mira dónde están los 3 escenarios, los food trucks y muchas cosas más!.</p>
-                <a href="boton">Mira aquí</a>
+                <a class="boton" href="#"> Mira aquí</a>
             </div>
             <div class="carta">
                 <h4> Grilla </h4>
-                <img src="img/grilla.jpg"  alt="...">
+                <img src="img/grilla.jpg"  alt="img_grilla">
                 <p class="card-text">Seguí el festival minuto a minuto para que no te pierdas nada!.</p>
-                <a href="boton" style="float: right;">Seguir Leyendo</a>
+                <a class="boton" href="#">Seguir Leyendo</a>
             </div>    
-        </section>
+            </section>
 
-    <!--Arranca el footer-->
-    <div class="container-fluid">
-        <footer class="nosotros">
-          <div class="nosotros">
-            <p class="pie-footer"> Verte Libre El Festival - &copy; 2023</p>
-            <p class="desarrolladores"> Desarrollado por: Rebora, Alejandro - Ellenberger, Gisela - Prystupa, Pablo - Lovotti, Guadalupe.</p> <br>
-          </div>
-          <div class="redes">
-            <ul class="iconos-redes">
-              <p class="redes"> Siguenos en nuestras redes: </p> 
-              <a href=""><img src="img/icono-face.png" alt=""></a>
-              <a href=""><img src="img/icono-instagram.png" alt=""></a>
-              <a href=""><img src="img/icono-youtube.png" alt=""></a>
-              <a href=""><img src="img/icono-twitter.png" alt=""></a>
-            </ul>
-          </div>
-  
-      </footer>
-    </main>
-    
+        <!--Arranca el footer-->
+        <div class="footer">
+            <footer class="nosotros">
+            <div class="nosotros">
+                <p class="pie-footer"> Verte Libre El Festival - &copy; 2023</p>
+                <p class="desarrolladores"> Desarrollado por: Ellenberger, Gisela - Prystupa, Pablo </p> <br>
+            </div>
+                <div class="redes">
+                    <ul class="iconos-redes">
+                    <p class="redes"> Siguenos en nuestras redes: </p> 
+                    <a href=""><img src="img/icono-face.png" alt=""></a>
+                    <a href=""><img src="img/icono-instagram.png" alt=""></a>
+                    <a href=""><img src="img/icono-youtube.png" alt=""></a>
+                    <a href=""><img src="img/icono-twitter.png" alt=""></a>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
 </body>
 </html>
-
